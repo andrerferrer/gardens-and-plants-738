@@ -1,0 +1,12 @@
+<h1 class='text-center'>Gardens and Plants 738</h1>
+<div class="cards m-3">
+  <% @gardens.each do |garden| %>
+    <div class="card-category" 
+        style="
+        position: relative;
+        background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+        url(<%= garden.banner_url %>)">
+      <%= link_to garden.name, garden_path(garden.id), class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>

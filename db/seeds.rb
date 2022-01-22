@@ -23,6 +23,11 @@ plants_data = [
     garden: Garden.first
   },
   {
+    name: "Banana Plant",
+    photo_url: "https://gardenerspath.com/wp-content/uploads/2019/12/Banana-Plant-with-Ripe-Fruit.jpg",
+    garden: Garden.first
+  },
+  {
     name: "Pau Brasilis",
     photo_url: "https://www.oeco.org.br/wp-content/uploads/2020/12/Oeco_Pau-brasil-cassio-vasconcelos.jpeg",
     garden: Garden.first
