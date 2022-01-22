@@ -7,7 +7,6 @@ class PlantTagsController < ApplicationController
 
   def create
     @plant = Plant.find(params[:plant_id])
-    @plant_tag.plant = @plant
 
     # find all the tags coming from the form
     @tags = Tag.find( params[:plant_tag][:tag_id] )
