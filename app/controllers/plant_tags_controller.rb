@@ -6,7 +6,6 @@ class PlantTagsController < ApplicationController
   end
 
   def create
-    @plant_tag = PlantTag.new # (strong_params)
     @plant = Plant.find(params[:plant_id])
     @plant_tag.plant = @plant
 
@@ -19,13 +18,6 @@ class PlantTagsController < ApplicationController
     end
 
     redirect_to garden_path(@plant.garden.id)
-
-    # if @plant_tag.save! # return "true" or RAISE and error
-    # if @plant_tag.save! # return true or false
-    #   redirect_to garden_path(@plant.garden.id)
-    # else
-    #   render :new
-    # end
   end
 
   private
