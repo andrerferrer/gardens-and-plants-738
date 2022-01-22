@@ -3,5 +3,8 @@ Rails.application.routes.draw do
   resources :gardens, only: %i[ show ] do
     resources :plants, only: %i[ new create ]
   end
-  resources :plants, only: %i[ destroy ]
+  resources :plants, only: %i[ destroy ] do
+    resources :plant_tags, only: %i[ new create ]
+  end
+
 end

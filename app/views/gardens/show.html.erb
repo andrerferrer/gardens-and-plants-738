@@ -14,6 +14,13 @@
         position: relative;
         background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
         url(<%= plant.photo_url %>)">
+
+      <div class="card-tags">
+        <% plant.tags.each do |tag| %>
+          <span><%= tag.name %></span>
+        <% end %>
+        <%= link_to "+", new_plant_plant_tag_path(plant) %>
+      </div>
       <%= plant.name %>
       <%= link_to "❌", plant_path(plant.id), method: :delete, style: 'position: absolute; top: 8px; right: 8px;' %>
     </div>

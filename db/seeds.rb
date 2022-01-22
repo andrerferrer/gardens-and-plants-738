@@ -37,3 +37,18 @@ plants_data = [
 plants_data.each do |plant_data|
   Plant.create!(plant_data)
 end
+
+# Create tags and add them to plants
+tag_names = Tag::NAMES
+
+tag_names.each do |tag_name|
+  Tag.create!(name: tag_name)
+end
+
+flower_tag = Tag.find_by(name: "Flower")
+vanilla = Plant.first
+
+plant_tag = PlantTag.new
+plant_tag.tag = flower_tag
+plant_tag.plant = vanilla
+plant_tag.save!
